@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { FiSearch, FiMapPin, FiHome, FiDollarSign, FiLayers, FiMaximize, FiSliders } from 'react-icons/fi';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const SearchBar = ({ onSearch, initialFilters = {} }) => {
+const EMPTY_FILTERS = {};
+
+const SearchBar = ({ onSearch, initialFilters = EMPTY_FILTERS }) => {
   const [city, setCity] = useState(initialFilters.city || '');
   const [propertyType, setPropertyType] = useState(initialFilters.propertyType || '');
   const [bedrooms, setBedrooms] = useState(initialFilters.bedrooms || '');
@@ -13,21 +15,41 @@ const SearchBar = ({ onSearch, initialFilters = {} }) => {
   const [selectedAmenities, setSelectedAmenities] = useState([]);
   const [showAdvanced, setShowAdvanced] = useState(false);
 
+  const {
+    city: filterCity,
+    propertyType: filterType,
+    bedrooms: filterBedrooms,
+    minPrice: filterMinPrice,
+    maxPrice: filterMaxPrice,
+    minArea: filterMinArea,
+    maxArea: filterMaxArea,
+    amenities: filterAmenities,
+  } = initialFilters || {};
+
   // Sync state with initialFilters when page mounts or updates (e.g. from Saved Searches)
   useEffect(() => {
-    setCity(initialFilters.city || '');
-    setPropertyType(initialFilters.propertyType || '');
-    setBedrooms(initialFilters.bedrooms || '');
-    setMinPrice(initialFilters.minPrice || '');
-    setMaxPrice(initialFilters.maxPrice || '');
-    setMinArea(initialFilters.minArea || '');
-    setMaxArea(initialFilters.maxArea || '');
+    setCity(filterCity || '');
+    setPropertyType(filterType || '');
+    setBedrooms(filterBedrooms || '');
+    setMinPrice(filterMinPrice || '');
+    setMaxPrice(filterMaxPrice || '');
+    setMinArea(filterMinArea || '');
+    setMaxArea(filterMaxArea || '');
     setSelectedAmenities(
-      initialFilters.amenities
-        ? (typeof initialFilters.amenities === 'string' ? initialFilters.amenities.split(',') : initialFilters.amenities)
+      filterAmenities
+        ? (typeof filterAmenities === 'string' ? filterAmenities.split(',') : filterAmenities)
         : []
     );
-  }, [initialFilters]);
+  }, [
+    filterCity,
+    filterType,
+    filterBedrooms,
+    filterMinPrice,
+    filterMaxPrice,
+    filterMinArea,
+    filterMaxArea,
+    filterAmenities
+  ]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
