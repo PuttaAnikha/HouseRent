@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Create configured axios instance
 const api = axios.create({
-  baseURL: 'http://localhost:5000',
+  baseURL: import.meta.env.VITE_API_URL || 'https://houserent-dxdr.onrender.com',
   withCredentials: true, // Needed for parsing HTTP-only cookies
 });
 
