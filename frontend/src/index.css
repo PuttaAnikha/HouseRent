@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --color-bg-light: #f8fafc;
+  --color-dark-50: #f8fafc;
+  --color-dark-100: #f1f5f9;
+  --color-dark-200: #e2e8f0;
+  --color-dark-300: #cbd5e1;
+  --color-dark-400: #94a3b8;
+  --color-dark-500: #64748b;
+  --color-dark-600: #475569;
+  --color-dark-700: #334155;
+  --color-dark-800: #1e293b;
+  --color-dark-900: #0f172a;
+}
+
+.dark {
+  --color-bg-light: #090d16;
+  --color-dark-50: #131a26;
+  --color-dark-100: #1a2333;
+  --color-dark-200: #243049;
+  --color-dark-300: #384b6f;
+  --color-dark-400: #6b7c9e;
+  --color-dark-500: #94a3b8;
+  --color-dark-600: #cbd5e1;
+  --color-dark-700: #cbd5e1;
+  --color-dark-800: #f1f5f9;
+  --color-dark-900: #f8fafc;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-bgLight text-dark-900 dark:bg-[#0b0f19] dark:text-dark-100 font-sans antialiased overflow-x-hidden transition-colors duration-300;
+  }
+}
+
+/* Custom styles for animations & premium elements */
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glassmorphism-dark {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom scrollbar for premium look */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark-50;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-dark-300 rounded-full hover:bg-dark-400 transition-colors;
+}
+
+/* Glassmorphism support in dark mode */
+.dark .glassmorphism {
+  background: rgba(15, 23, 42, 0.7);
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Background overrides in dark mode */
+.dark .bg-white {
+  background-color: #111827 !important; /* Tailwind card bg override */
+}
+
+/* border color mapping overrides */
+.dark .border-dark-100 {
+  border-color: #1a2333 !important;
+}
+
+.dark .border-dark-200 {
+  border-color: #243049 !important;
+}
+
+.dark .bg-dark-50 {
+  background-color: #131a26 !important;
+}
+
+.dark .hover\:bg-dark-50:hover {
+  background-color: #131a26 !important;
+}
+
+.dark .hover\:bg-dark-100:hover {
+  background-color: #1a2333 !important;
+}
+
+.dark .bg-bgLight {
+  background-color: #090d16 !important;
+}

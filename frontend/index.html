@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
+    
+    <!-- SEO Meta Tags -->
+    <title>Nestora | Find Your Perfect Place to Call Home</title>
+    <meta name="description" content="Discover premium house rentals and property listings on Nestora. Search, list, buy, or rent apartments, villas, and houses with absolute ease." />
+    <meta name="keywords" content="real estate, house rent, property listing, find home, nestora, buy house, rent apartment" />
+    <meta name="author" content="Nestora Team" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Nestora | Find Your Perfect Place to Call Home" />
+    <meta property="og:description" content="Discover premium house rentals and property listings on Nestora. Search, list, buy, or rent apartments, villas, and houses with absolute ease." />
+    <meta property="og:image" content="/nestora-og.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Nestora | Find Your Perfect Place to Call Home" />
+    <meta property="twitter:description" content="Discover premium house rentals and property listings on Nestora. Search, list, buy, or rent apartments, villas, and houses with absolute ease." />
+  </head>
+  <body class="bg-[#F8FAFC]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
