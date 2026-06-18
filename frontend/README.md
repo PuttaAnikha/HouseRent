@@ -9,7 +9,6 @@ This is the React-based Single Page Application (SPA) client for **Nestora**, bu
 - **🔒 Isolated Favourites**: Dynamic, per-user Favorites management that protects guest actions and synchronizes favorites lists to specific logged-in users.
 - **📹 Virtual Tour Lightbox**: Direct click-to-play video tour viewer inside a modal overlay to keep users engaged on property detail pages.
 - **✉️ Direct Gmail Integration**: Renter detail pre-loading with automated mail-to client opens, alongside a secondary copy-to-clipboard backup.
-- **📞 Indian Number Validator**: strict validation for standard Indian mobile numbers (`+91` followed by 10 digits) during user profile updates and registration.
 - **📊 Market Insights & Dashboard**: Real-time insights, metrics, and property availability statistics visualized on interactive dashboards.
 
 ---

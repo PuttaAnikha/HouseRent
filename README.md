@@ -2,31 +2,39 @@
 
 Nestora is a premium real estate and house rental marketplace designed to connect renters and property owners. Built on the MERN stack (MongoDB, Express.js, React, Node.js) with Tailwind CSS, Nestora features a modern, responsive user experience with premium design elements.
 
-## Features
+---
 
-### 🌓 Smooth Dark Mode
-- Toggle between light and dark theme directly from the navigation bar.
-- Fully synchronized across pages using `localStorage` preference state.
-- Custom CSS transitions for smooth, eye-pleasing dark transitions.
+## Why Nestora?
 
-### 📹 Virtual Video Tour Lightbox
-- Property owners can specify a virtual tour video URL (YouTube links or direct MP4 files) when creating a listing.
-- Renters can launch the tour from a dedicated preview card that opens in a premium modal lightbox popup overlay.
+Traditional real estate platforms are often cluttered, slow, and suffer from fragmented communication channels. Nestora solves these challenges by providing:
 
-### ✉️ Direct Gmail Integration
-- Owners can message renters directly via Gmail in a new browser tab with pre-filled renter info and inquiry subjects.
-- Clipboard copy backup with visual feedback is built-in.
-
-### 🔒 User-Specific Favourites
-- Tenants can save listings to their personal "Favourites" list.
-- Storage lists are isolated per user profile using custom `localStorage` keys.
-- Automatic guest protection redirects unauthenticated users to the login screen.
-
-### 📱 Formatted Indian Contact Inputs
-- Ensures only valid 10-digit Indian mobile numbers (prefixed with `+91`) can be registered or updated.
-- Formats contact details dynamically on cards for clean readability.
+1. **Direct Landlord-Tenant Pipeline**: Cuts out intermediate agents and brokerages, allowing tenants and landlords to communicate directly and transparently.
+2. **Reduced Communication Latency**: With one-click Gmail client integration and automated WhatsApp generation, landlords can respond to renter inquiries instantly.
+3. **High-Fidelity Virtual Walk-throughs**: Virtual video tours integrated directly into listing detail pages reduce physical visitation requirements, saving time for both owners and renters.
+4. **Data-Driven Discovery**: Simple, interactive dashboards allow users to view current market pricing insights and filter listings by location, type, and price range.
+5. **Vetted Listing Quality**: Administrators have direct control to verify and approve property owners before they can list, ensuring a secure and spam-free marketplace.
 
 ---
+
+## Features
+
+### 🏢 Core Platform Features
+
+- **Multi-Role Portals**: 
+  - **Renter/Tenant Portal**: Search listings, track submitted bookings, and manage personal favourite properties.
+  - **Owner/Landlord Portal**: Post new properties (with images/videos), update/delete listings, and review/approve/reject booking inquiries.
+  - **Admin Dashboard**: Oversee the ecosystem by approving owner accounts, deleting inappropriate properties, deleting user accounts, and creating new admins.
+- **Advanced Property Discovery**: Search and filter properties by city, type, and price range.
+- **Inquiry & Booking Workflow**: Renters send direct inquiries for specific properties. Landlords receive inquiries with renter contact info and update request status (Pending, Approved, Rejected).
+- **Market Insights Dashboard**: Real-time visualization of market metrics, active property counts, and price ranges.
+- **Secure Authentication**: Cookie-based JWT authentication with role-based route protection.
+
+### 🌓 Premium Enhancements
+
+- **Smooth Dark Mode Toggle**: A modern slider in the navigation bar transitioning the site between light and dark modes with HSL variable synchronization.
+- **Virtual Video Tour Lightbox**: Landlords can link YouTube or MP4 virtual walk-throughs, which tenants can view inside a modal lightbox overlay.
+- **Direct Gmail Integration**: Landlords can click an inquiry's email to compose directly via Gmail in a new tab, preloaded with renter details, with clipboard backup.
+- **User-Isolated Favourites**: Favourites lists are stored in isolated `localStorage` keys per user account to prevent session leaks.
 
 ## Folder Structure
 
