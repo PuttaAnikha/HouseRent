@@ -2,6 +2,10 @@
 
 This is the React-based Single Page Application (SPA) client for **Nestora**, built using Vite, Tailwind CSS, and custom styling systems.
 
+- **Live Application Link**: [https://house-rent-chi-seven.vercel.app](https://house-rent-chi-seven.vercel.app)
+
+---
+
 ## Features
 
 - **🌓 Animated Dark Mode Toggle**: Responsive toggle bar header that saves user theme preferences to `localStorage` and applies smooth transitions.

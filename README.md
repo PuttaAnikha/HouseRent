@@ -4,6 +4,13 @@ Nestora is a premium real estate and house rental marketplace designed to connec
 
 ---
 
+## 🚀 Deployed Links
+
+- **Live Frontend App**: [https://house-rent-chi-seven.vercel.app](https://house-rent-chi-seven.vercel.app)
+- **Live Backend API**: [https://houserent-dxdr.onrender.com](https://houserent-dxdr.onrender.com)
+
+---
+
 ## Why Nestora?
 
 Traditional real estate platforms are often cluttered, slow, and suffer from fragmented communication channels. Nestora solves these challenges by providing:
